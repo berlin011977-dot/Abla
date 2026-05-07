@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>S&A DuoBuild | Contact & Smart Calculator 🏠✨</title>
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+  <header>
+    <div class="container">
+      <!-- Logo with icon -->
+      <a href="index.html" class="logo">
+        <div class="logo-icon">🏗️</div>
+        <span>S&A DuoBuild</span>
+      </a>
+      
+      <!-- Navigation -->
+      <nav>
+       <ul>
+         <li><a href="index.html" class="nav-link">
+    <i class="fas fa-home"></i>  Home</a></li>
+<li><a href="about.html" class="nav-link">
+    <i class="fas fa-users"></i>  About </a></li>
+
+<li><a href="services.html" class="nav-link">
+    <i class="fas fa-cog"></i>  Services </a></li>
+
+<li><a href="gallery.html" class="nav-link">
+    <i class="fas fa-images"></i> Gallery</a></li>
+
+<li><a href="contact.html" class="nav-link active">
+    <i class="fas fa-envelope"></i>  Contact </a></li>
+    <li><a href="Calculator.html" class="nav-link">
+    <i class="fas fa-calculator"></i>  Calculator </a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- 🔹 Smart Calculator Section -->
+    <section>
+      <div class="calc-section">
+        <div class="calc-header">
+          <h2> Smart Project Calculator</h2>
+          <p>Enter your details & get an instant preliminary estimate 🚀</p>
+        </div>
+        <div class="calc-grid">
+          <div class="form-group">
+            <label for="calc-area"> Land Area (m²)</label>
+            <input type="number" id="calc-area" placeholder="e.g., 450" min="100">
+          </div>
+          <div class="form-group">
+            <label for="calc-budget"> Estimated Budget ($)</label>
+            <input type="number" id="calc-budget" placeholder="e.g., 150000" min="50000">
+          </div>
+          <div class="form-group">
+            <label for="calc-style"> Design Style</label>
+            <select id="calc-style">
+              <option value="modern"> Modern & Sleek</option>
+              <option value="classic"> Classic Luxury</option>
+              <option value="eco"> Smart Eco-Friendly</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" class="btn-calc" onclick="calculateSmart()">
+           Calculate My Vision
+        </button>
+        
+        <div class="result-box" id="calc-result">
+          <div class="result-grid">
+            <div class="result-item">
+              <h4> Suggested Rooms</h4>
+              <p id="res-rooms">-</p>
+            </div>
+            <div class="result-item">
+              <h4>Smart Features</h4>
+              <p id="res-tech">-</p>
+            </div>
+            <div class="result-item">
+              <h4> Est. Savings</h4>
+              <p id="res-saving">-</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🔹 Contact Form Section -->
+    <section>
+      <h2>🚀 Start Your Dream Project With Us</h2>
+      <form id="contact-form" action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" id="name" name="name" placeholder="John Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="john@example.com" required>
+        </div>
+        <div class="form-group">
+          <label for="phone"> Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
+        </div>
+        <div class="form-group">
+          <label for="area"> Land Area (m²)</label>
+          <input type="number" id="area" name="area" placeholder="e.g., 450" required>
+        </div>
+        <div class="form-group">
+          <label for="budget"> Budget Range ($)</label>
+          <input type="number" id="budget" name="budget" placeholder="e.g., 150000" required>
+        </div>
+        <div class="form-group">
+          <label for="service"> Service Type</label>
+          <select id="service" name="service">
+            <option value="full"> Full Project (Civil + Smart + Decor)</option>
+            <option value="smart"> Smart Home Setup Only</option>
+            <option value="design">  Architectural/Interior Design</option>
+            <option value="consult"> Engineering Consultation</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message"> Additional Details</label>
+          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your vision... "></textarea>
+        </div>
+        <button type="submit" class="btn">
+          📤 Send My Request
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>🏗️ &copy; 2026 S&A DuoBuild. All rights reserved. ✨</p>
+      <p style="margin-top: 0.5rem; font-size: 0.9rem;">🌐 Building Smart Homes, One Dream at a Time 🏡💡</p>
+    </div>
+  </footer>
+
+  <script>
+    function calculateSmart() {
+      const area = parseFloat(document.getElementById('calc-area').value);
+      const budget = parseFloat(document.getElementById('calc-budget').value);
+      const style = document.getElementById('calc-style').value;
+
+      // Validation
+      if (!area || area < 100 || !budget || budget < 50000) {
+        alert('⚠️ Please enter a valid area (min 100 m²) and realistic budget (min $50,000).');
+        return;
+      }
+
+      // Calculation Logic (Customizable for your academic/project needs)
+      let rooms = Math.max(3, Math.min(7, Math.floor(area / 45)));
+      let tech = style === 'modern' ? ' Smart Lights +  AC Control' : 
+                 style === 'classic' ? ' Full Security +  Voice Control' : 
+                 'Energy-Saving Automation';
+      
+      let costPerSqm = budget / area;
+      let saving = Math.min(35, Math.max(5, Math.floor(20 + (costPerSqm / 1200))));
+
+      // Display Results with animation
+      document.getElementById('res-rooms').textContent = rooms;
+      document.getElementById('res-tech').textContent = tech;
+      document.getElementById('res-saving').textContent = saving + '%';
+      
+      // Show result box with smooth animation
+      const resultBox = document.getElementById('calc-result');
+      resultBox.classList.add('show');
+      
+      // Optional: Scroll to results
+      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you! Your request has been received.');
+      this.reset();
+    });
+  </script>
+</body>
+</html>
