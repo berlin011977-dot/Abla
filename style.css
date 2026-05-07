@@ -565,6 +565,11 @@ footer {
   color: var(--text-muted);
 }
 
+.developer-credit {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   header .container {
