@@ -1,78 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- إعدادات الصفحة الأساسية وربط ملفات التصميم والأيقونات -->
+  <!-- إعدادات الصفحة الرئيسية وربط الثيم واللوقو وأيقونة التبويب -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>S&A DuoBuild | Home</title>
-  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
+  <meta name="description" content="S&A DuoBuild delivers smart construction, interior design, and connected home planning from concept to key.">
+  <title>S&A DuoBuild | Smart Construction</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- رأس الصفحة وفيه اللوقو وقائمة التنقل -->
-  <header>
-    <div class="container">
-      <!-- اللوقو الموجود في يسار الهيدر -->
-      <a href="index.html" class="logo">
-        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
-        <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
+  <!-- الهيدر الموحد لكل الموقع -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="S&A DuoBuild home">
+        <img src="assets/logo.svg" alt="S&A DuoBuild logo" class="brand-logo">
         <span>S&A DuoBuild</span>
       </a>
-      
-      <!-- قائمة التنقل الموجودة في يمين الهيدر -->
-      <nav>
-         <ul>
-         <li><a href="index.html" class="nav-link active">
-    <i class="fas fa-home"></i>  Home</a></li>
-<li><a href="about.html" class="nav-link">
-    <i class="fas fa-users"></i>  About </a></li>
-<li><a href="services.html" class="nav-link">
-    <i class="fas fa-cog"></i>  Services </a></li>
-<li><a href="gallery.html" class="nav-link">
-    <i class="fas fa-images"></i> Gallery</a></li>
-<li><a href="contact.html" class="nav-link">
-    <i class="fas fa-envelope"></i>  Contact </a></li>
-    <li><a href="Calculator.html" class="nav-link">
-    <i class="fas fa-calculator"></i>  Calculator </a></li>
-        </ul>
-      </nav>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Calculator.html">Calculator</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
   <main>
-    <!-- قسم البداية الرئيسي وفيه النص والصورة -->
+    <!-- قسم البداية: رسالة الموقع الأساسية مع صورة حقيقية للمشروع -->
     <section class="hero">
-      <div class="container hero-container">
-        <div class="hero-text">
-          <h1>Building Your Smart Future..</h1>
-          <h2>From Concept to Key</h2>
-          <p>We provide specialized services for smart homes and buildings. Starting from the ground up to interior design and asset management, we turn your vision into a fully automated, sustainable reality.</p>
-          <a href="contact.html" class="btn">Start Your Project..🚀</a>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <span class="eyebrow">Smart homes. Clear planning. Better delivery.</span>
+          <h1>Build a smarter space from concept to key.</h1>
+          <p class="lead">S&A DuoBuild combines construction planning, interior design, smart home systems, and project guidance in one clean workflow.</p>
+          <div class="actions">
+            <a class="btn" href="contact.html">Start Your Project</a>
+            <a class="btn secondary" href="Calculator.html">Estimate Cost</a>
+          </div>
+          <div class="quick-stats" aria-label="Project highlights">
+            <div class="stat"><strong>360°</strong><span>Planning support</span></div>
+            <div class="stat"><strong>IoT</strong><span>Smart systems ready</span></div>
+            <div class="stat"><strong>1</strong><span>Unified workflow</span></div>
+          </div>
         </div>
-        <div class="hero-image">
-          <img src="amoga.jpeg" alt="Smart Home Interior">
+        <div class="hero-media reveal">
+          <img src="amoga.jpeg" alt="Modern smart home interior">
         </div>
       </div>
     </section>
-<hr>
 
-    <!-- قسم مميزات الشركة المعروضة في كروت -->
-    <section class=" features-section ">
-      <h2>Why Choose S&A DuoBuild?</h2>
-      <div class="grid">
-        <div class="card"><h3>📐 Precision Engineering</h3><p>Expert team in civil and architectural planning according to the latest standards.</p></div>
-        <div class="card"><h3>🤖 Smart Technologies</h3><p>Full integration with automation, energy, and home security systems.</p></div>
-        <div class="card"><h3>🎨 Interior Design</h3><p>Modern decor touches that match your taste and increase property value.</p></div>
+    <!-- قسم يشرح القيمة الأساسية للموقع -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What we make easier</span>
+          <h2>One coordinated path for planning, building, and upgrading.</h2>
+          <p class="lead">The site is organized to help visitors understand services quickly, estimate a project, review visual examples, and send a request without friction.</p>
+        </div>
+        <div class="grid three">
+          <article class="card reveal">
+            <span class="card-icon">01</span>
+            <h3>Construction Planning</h3>
+            <p>Budget direction, area review, execution phases, and practical project structure before work begins.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon">02</span>
+            <h3>Smart Home Setup</h3>
+            <p>Lighting, security, climate, energy control, and connected systems planned with the build.</p>
+          </article>
+          <article class="card reveal">
+            <span class="card-icon">03</span>
+            <h3>Interior Experience</h3>
+            <p>Clean design choices, material guidance, and comfortable spaces that match modern living.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم خطوات العمل -->
+    <section class="section">
+      <div class="container grid two">
+        <div class="section-head reveal">
+          <span class="eyebrow">Process</span>
+          <h2>From first idea to handover.</h2>
+          <p class="lead">A clear process keeps the project understandable and reduces surprises during execution.</p>
+          <div class="actions">
+            <a class="btn secondary" href="services.html">View Services</a>
+          </div>
+        </div>
+        <div class="timeline reveal">
+          <div class="timeline-item"><div><h3>Discovery</h3><p>Understand space, needs, lifestyle, and budget range.</p></div></div>
+          <div class="timeline-item"><div><h3>Design & Estimate</h3><p>Prepare practical options and a transparent early estimate.</p></div></div>
+          <div class="timeline-item"><div><h3>Build & Integrate</h3><p>Coordinate construction, finishes, and smart home readiness.</p></div></div>
+          <div class="timeline-item"><div><h3>Deliver & Support</h3><p>Review the final project and support future upgrades.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- قسم دعوة نهائي للتواصل -->
+    <section class="section section-alt">
+      <div class="container grid two">
+        <div class="feature-image reveal">
+          <img src="3.jpg" alt="Elegant interior design detail">
+        </div>
+        <div class="section-head reveal">
+          <span class="eyebrow">Ready when you are</span>
+          <h2>Use the calculator, then send your project details.</h2>
+          <p class="lead">The calculator gives a quick preliminary direction. The contact page collects the details needed for a cleaner next step.</p>
+          <div class="actions">
+            <a class="btn" href="Calculator.html">Open Calculator</a>
+            <a class="btn secondary" href="gallery.html">See Gallery</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 S&A DuoBuild. All rights reserved.</p>
+  <!-- الفوتر الموحد وحقوق الملكية -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>S&A DuoBuild</strong>
+        <p>&copy; 2026. All rights reserved.</p>
+      </div>
       <p class="developer-credit">Developed by Sara Sameh and Abla Abdullah</p>
     </div>
   </footer>

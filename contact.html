@@ -1,193 +1,103 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en">
 <head>
-  <!-- إعدادات صفحة التواصل وربط ملفات التصميم والأيقونات -->
+  <!-- إعدادات صفحة التواصل وربط الثيم واللوقو -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <title>S&A DuoBuild | Contact & Smart Calculator 🏠✨</title>
-  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
+  <meta name="description" content="Contact S&A DuoBuild to start a smart construction or interior design project.">
+  <title>S&A DuoBuild | Contact</title>
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
-  
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <!-- رأس الصفحة وفيه اللوقو وقائمة التنقل -->
-  <header>
-    <div class="container">
-      <!-- اللوقو الموجود في يسار الهيدر -->
-      <a href="index.html" class="logo">
-        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
-        <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
+  <!-- الهيدر الموحد لكل الموقع -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="S&A DuoBuild home">
+        <img src="assets/logo.svg" alt="S&A DuoBuild logo" class="brand-logo">
         <span>S&A DuoBuild</span>
       </a>
-      
-      <!-- قائمة التنقل بين صفحات الموقع -->
-      <nav>
-       <ul>
-         <li><a href="index.html" class="nav-link">
-    <i class="fas fa-home"></i>  Home</a></li>
-<li><a href="about.html" class="nav-link">
-    <i class="fas fa-users"></i>  About </a></li>
-
-<li><a href="services.html" class="nav-link">
-    <i class="fas fa-cog"></i>  Services </a></li>
-
-<li><a href="gallery.html" class="nav-link">
-    <i class="fas fa-images"></i> Gallery</a></li>
-
-<li><a href="contact.html" class="nav-link active">
-    <i class="fas fa-envelope"></i>  Contact </a></li>
-    <li><a href="Calculator.html" class="nav-link">
-    <i class="fas fa-calculator"></i>  Calculator </a></li>
-        </ul>
-      </nav>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="Calculator.html">Calculator</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+    </nav>
   </header>
 
-  <main class="container">
-    <!-- قسم الحاسبة الذكية لإعطاء تقدير أولي قبل إرسال الطلب -->
-    <section>
-      <div class="calc-section">
-        <div class="calc-header">
-          <h2> Smart Project Calculator</h2>
-          <p>Enter your details & get an instant preliminary estimate 🚀</p>
-        </div>
-        <div class="calc-grid">
-          <div class="form-group">
-            <label for="calc-area"> Land Area (m²)</label>
-            <input type="number" id="calc-area" placeholder="e.g., 450" min="100">
-          </div>
-          <div class="form-group">
-            <label for="calc-budget"> Estimated Budget ($)</label>
-            <input type="number" id="calc-budget" placeholder="e.g., 150000" min="50000">
-          </div>
-          <div class="form-group">
-            <label for="calc-style"> Design Style</label>
-            <select id="calc-style">
-              <option value="modern"> Modern & Sleek</option>
-              <option value="classic"> Classic Luxury</option>
-              <option value="eco"> Smart Eco-Friendly</option>
-            </select>
-          </div>
-        </div>
-        <button type="button" class="btn-calc" onclick="calculateSmart()">
-           Calculate My Vision
-        </button>
-        
-        <div class="result-box" id="calc-result">
-          <div class="result-grid">
-            <div class="result-item">
-              <h4> Suggested Rooms</h4>
-              <p id="res-rooms">-</p>
-            </div>
-            <div class="result-item">
-              <h4>Smart Features</h4>
-              <p id="res-tech">-</p>
-            </div>
-            <div class="result-item">
-              <h4> Est. Savings</h4>
-              <p id="res-saving">-</p>
-            </div>
-          </div>
-        </div>
+  <main>
+    <!-- مقدمة صفحة التواصل -->
+    <section class="section">
+      <div class="container section-head reveal">
+        <span class="eyebrow">Contact</span>
+        <h1>Tell us what you want to build.</h1>
+        <p class="lead">Send the project basics and the site will keep the request clear without reloading the page.</p>
       </div>
-    </section>
 
-    <!-- قسم نموذج التواصل لإرسال بيانات المشروع -->
-    <section>
-      <h2>🚀 Start Your Dream Project With Us</h2>
-      <form id="contact-form" action="#" method="POST">
-        <div class="form-group">
-          <label for="name">Full Name</label>
-          <input type="text" id="name" name="name" placeholder="John Doe" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" placeholder="john@example.com" required>
-        </div>
-        <div class="form-group">
-          <label for="phone"> Phone Number</label>
-          <input type="tel" id="phone" name="phone" placeholder="+1 234 567 890" required>
-        </div>
-        <div class="form-group">
-          <label for="area"> Land Area (m²)</label>
-          <input type="number" id="area" name="area" placeholder="e.g., 450" required>
-        </div>
-        <div class="form-group">
-          <label for="budget"> Budget Range ($)</label>
-          <input type="number" id="budget" name="budget" placeholder="e.g., 150000" required>
-        </div>
-        <div class="form-group">
-          <label for="service"> Service Type</label>
-          <select id="service" name="service">
-            <option value="full"> Full Project (Civil + Smart + Decor)</option>
-            <option value="smart"> Smart Home Setup Only</option>
-            <option value="design">  Architectural/Interior Design</option>
-            <option value="consult"> Engineering Consultation</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="message"> Additional Details</label>
-          <textarea id="message" name="message" rows="5" placeholder="Tell us more about your vision... "></textarea>
-        </div>
-        <button type="submit" class="btn">
-          📤 Send My Request
-        </button>
-      </form>
+      <!-- نموذج التواصل ومعلومات المشروع -->
+      <div class="container tool-panel">
+        <form class="form-card reveal" data-contact-form>
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="name">Full name</label>
+              <input id="name" name="name" type="text" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" placeholder="name@example.com" required>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" placeholder="+20 000 000 0000">
+            </div>
+            <div class="form-group">
+              <label for="service">Service type</label>
+              <select id="service" name="service">
+                <option>Full project planning</option>
+                <option>Smart home setup</option>
+                <option>Interior design</option>
+                <option>Engineering consultation</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Project details</label>
+              <textarea id="message" name="message" placeholder="Write the area, budget range, timeline, and anything important."></textarea>
+            </div>
+            <button class="btn" type="submit">Send Request</button>
+            <p class="notice" data-contact-message aria-live="polite"></p>
+          </div>
+        </form>
+
+        <aside class="reveal">
+          <div class="section-head">
+            <span class="eyebrow">What to include</span>
+            <h2>Better details make a better first estimate.</h2>
+          </div>
+          <div class="contact-list">
+            <div class="contact-item"><h3>Project area</h3><p>Share land area, floors, and whether the space is new or existing.</p></div>
+            <div class="contact-item"><h3>Budget direction</h3><p>A rough range is enough for the first conversation.</p></div>
+            <div class="contact-item"><h3>Smart needs</h3><p>Mention lighting, security, energy, climate, or voice control needs.</p></div>
+            <div class="contact-item"><h3>Design mood</h3><p>Modern, classic, premium, minimal, or eco-friendly directions.</p></div>
+          </div>
+        </aside>
+      </div>
     </section>
   </main>
 
-  <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
-  <footer>
-    <div class="container">
-      <p>🏗️ &copy; 2026 S&A DuoBuild. All rights reserved. ✨</p>
-      <p style="margin-top: 0.5rem; font-size: 0.9rem;">🌐 Building Smart Homes, One Dream at a Time 🏡💡</p>
+  <!-- الفوتر الموحد وحقوق الملكية -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>S&A DuoBuild</strong>
+        <p>&copy; 2026. All rights reserved.</p>
+      </div>
       <p class="developer-credit">Developed by Sara Sameh and Abla Abdullah</p>
     </div>
   </footer>
-
-  <script>
-    // دالة الحاسبة: تقرأ المدخلات وتحسب عدد الغرف والمميزات ونسبة التوفير
-    function calculateSmart() {
-      const area = parseFloat(document.getElementById('calc-area').value);
-      const budget = parseFloat(document.getElementById('calc-budget').value);
-      const style = document.getElementById('calc-style').value;
-
-      // التحقق من صحة القيم قبل عرض النتيجة
-      if (!area || area < 100 || !budget || budget < 50000) {
-        alert('⚠️ Please enter a valid area (min 100 m²) and realistic budget (min $50,000).');
-        return;
-      }
-
-      // حساب النتائج بناءً على المساحة والميزانية ونمط التصميم
-      let rooms = Math.max(3, Math.min(7, Math.floor(area / 45)));
-      let tech = style === 'modern' ? ' Smart Lights +  AC Control' : 
-                 style === 'classic' ? ' Full Security +  Voice Control' : 
-                 'Energy-Saving Automation';
-      
-      let costPerSqm = budget / area;
-      let saving = Math.min(35, Math.max(5, Math.floor(20 + (costPerSqm / 1200))));
-
-      // عرض النتائج داخل صندوق النتيجة
-      document.getElementById('res-rooms').textContent = rooms;
-      document.getElementById('res-tech').textContent = tech;
-      document.getElementById('res-saving').textContent = saving + '%';
-      
-      // إظهار صندوق النتيجة
-      const resultBox = document.getElementById('calc-result');
-      resultBox.classList.add('show');
-      
-      // الانتقال لصندوق النتيجة بسلاسة
-      resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    // منع تحديث الصفحة عند إرسال الفورم وعرض رسالة تأكيد بسيطة
-    document.getElementById('contact-form').addEventListener('submit', function (event) {
-      event.preventDefault();
-      alert('Thank you! Your request has been received.');
-      this.reset();
-    });
-  </script>
 </body>
 </html>

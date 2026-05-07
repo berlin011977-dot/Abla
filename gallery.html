@@ -1,75 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- إعدادات صفحة المعرض وربط ملفات التصميم والأيقونات -->
+  <!-- إعدادات صفحة المعرض وربط الثيم واللوقو -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta name="description" content="A visual gallery of modern homes, interiors, and smart living inspiration by S&A DuoBuild.">
   <title>S&A DuoBuild | Gallery</title>
-  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-   <!-- رأس الصفحة وفيه اللوقو وقائمة التنقل -->
-   <header>
-    <div class="container">
-      <!-- اللوقو الموجود في يسار الهيدر -->
-      <a href="index.html" class="logo">
-        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
-        <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
+  <!-- الهيدر الموحد لكل الموقع -->
+  <header class="site-header">
+    <nav class="site-nav container" aria-label="Main navigation">
+      <a href="index.html" class="brand" aria-label="S&A DuoBuild home">
+        <img src="assets/logo.svg" alt="S&A DuoBuild logo" class="brand-logo">
         <span>S&A DuoBuild</span>
       </a>
-      
-      <!-- قائمة التنقل الموجودة في يمين الهيدر -->
-      <nav>
-         <ul>
-          <li><a href="index.html" class="nav-link">
-    <i class="fas fa-home"></i>  Home</a></li>
-<li><a href="about.html" class="nav-link">
-    <i class="fas fa-users"></i>  About </a></li>
-
-<li><a href="services.html" class="nav-link">
-    <i class="fas fa-cog"></i>  Services </a></li>
-
-<li><a href="gallery.html" class="nav-link active">
-    <i class="fas fa-images"></i> Gallery</a></li>
-
-<li><a href="contact.html" class="nav-link">
-    <i class="fas fa-envelope"></i>  Contact </a></li>
-    <li><a href="Calculator.html" class="nav-link">
-    <i class="fas fa-calculator"></i>  Calculator </a></li>
-        </ul>
-      </nav>
-    </div>
+      <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-expanded="false" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html">Services</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="Calculator.html">Calculator</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
   </header>
 
-
-  <main class="container">
-    <!-- قسم معرض الصور للمشاريع السابقة -->
-    <section>
-      <h2>معرض المشاريع السابقة</h2>
-      <table class="gallery-table">
-        <!-- الصف الأول من صور المشاريع -->
-        <tr>
-          <td><img src="1.jpg" alt="Modern residential project"></td>
-          <td><img src="2.jpg" alt="Smart home exterior"></td>
-          <td><img src="3.jpg" alt="Interior design project"></td>
-        </tr>
-        <!-- الصف الثاني من صور المشاريع -->
-        <tr>
-          <td><img src="4.jpg" alt="Luxury living room"></td>
-          <td><img src="5.jpg" alt="Contemporary house design"></td>
-          <td><img src="6.jpg" alt="Architectural project detail"></td>
-        </tr>
-      </table>
+  <main>
+    <!-- مقدمة صفحة المعرض -->
+    <section class="section">
+      <div class="container section-head reveal">
+        <span class="eyebrow">Gallery</span>
+        <h1>Visual ideas for smart modern spaces.</h1>
+        <p class="lead">A clean gallery that shows the type of spaces S&A DuoBuild is designed to plan, build, finish, and upgrade.</p>
+      </div>
+      <div class="container gallery-grid">
+        <figure class="gallery-item reveal">
+          <img src="1.jpg" alt="Modern residential project">
+          <figcaption>Modern residential planning</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="2.jpg" alt="Smart home exterior">
+          <figcaption>Smart home exterior direction</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="3.jpg" alt="Interior design project">
+          <figcaption>Warm interior detailing</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="4.jpg" alt="Luxury living room">
+          <figcaption>Luxury living concept</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="5.jpg" alt="Contemporary house design">
+          <figcaption>Contemporary build style</figcaption>
+        </figure>
+        <figure class="gallery-item reveal">
+          <img src="6.jpg" alt="Architectural project detail">
+          <figcaption>Architectural finish detail</figcaption>
+        </figure>
+      </div>
     </section>
   </main>
 
-  <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
-  <footer>
-    <div class="container">
-      <p>&copy; 2026 S&A DuoBuild. All rights reserved.</p>
+  <!-- الفوتر الموحد وحقوق الملكية -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <strong>S&A DuoBuild</strong>
+        <p>&copy; 2026. All rights reserved.</p>
+      </div>
       <p class="developer-credit">Developed by Sara Sameh and Abla Abdullah</p>
     </div>
   </footer>
