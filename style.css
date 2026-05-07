@@ -228,6 +228,12 @@ h3 {
   gap: 22px;
 }
 
+.hero-logo {
+  width: min(280px, 72vw);
+  height: auto;
+  margin-bottom: 2px;
+}
+
 .hero-media {
   position: relative;
 }
