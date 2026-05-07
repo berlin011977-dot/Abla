@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- إعدادات صفحة من نحن وربط الخطوط وملفات التصميم والأيقونات -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -8,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>S&A DuoBuild | About</title>
-  <!-- Replace assets/favicon.svg later to change the browser tab icon. -->
+  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
   <style>
@@ -36,7 +37,7 @@
             overflow-x: hidden;
         }
 
-        /* Hero Section */
+        /* تنسيق قسم البداية في صفحة من نحن */
         .hero {
             background: linear-gradient(135deg, rgba(30, 58, 95, 0.95) 0%, rgba(30, 58, 95, 0.8) 100%), 
                         url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
@@ -82,7 +83,7 @@
             color: var(--accent-color);
         }
 
-        /* Section Styling */
+        /* تنسيق عام للأقسام والحاوية */
         section {
             padding: 5rem 2rem;
         }
@@ -111,7 +112,7 @@
             border-radius: 2px;
         }
 
-        /* Vision Section */
+        /* تنسيق قسم الرؤية والقيم */
         .vision {
             background: var(--light-bg);
         }
@@ -178,7 +179,7 @@
             font-size: 1rem;
         }
 
-        /* Process Section */
+        /* تنسيق قسم خطوات العمل */
         .process {
             background: var(--white);
         }
@@ -274,7 +275,7 @@
             font-size: 0.95rem;
         }
 
-        /* Why Choose Us */
+        /* تنسيق قسم لماذا تختارنا */
         .why-us {
             background: linear-gradient(135deg, var(--primary-color) 0%, #2C5282 100%);
             color: var(--white);
@@ -328,7 +329,7 @@
             line-height: 1.6;
         }
 
-        /* CTA Section */
+        /* تنسيق قسم الدعوة للتواصل */
         .cta {
             background: var(--light-bg);
             text-align: center;
@@ -390,7 +391,7 @@
             color: var(--white);
         }
 
-        /* Footer */
+        /* تنسيق تذييل الصفحة */
         footer {
             background: var(--primary-color);
             color: var(--white);
@@ -402,7 +403,7 @@
             opacity: 0.9;
         }
 
-        /* Animations */
+        /* حركات الظهور */
         @keyframes fadeInUp {
             from {
                 opacity: 0;
@@ -414,7 +415,7 @@
             }
         }
 
-        /* Responsive Design */
+        /* تجاوب الصفحة مع الشاشات الصغيرة */
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 2.2rem;
@@ -458,7 +459,7 @@
             }
         }
 
-        /* Scroll Animation */
+        /* حركة ظهور العناصر عند التمرير */
         .fade-in {
             opacity: 0;
             transform: translateY(30px);
@@ -472,16 +473,17 @@
     </style>
 </head>
 <body>
+ <!-- رأس الصفحة وفيه اللوقو وقائمة التنقل -->
  <header>
     <div class="container">
-      <!-- Logo with icon on far left -->
+      <!-- اللوقو الموجود في يسار الهيدر -->
       <a href="index.html" class="logo">
-        <!-- Replace assets/logo.svg later to change the website logo. -->
+        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
         <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
         <span>S&A DuoBuild</span>
       </a>
       
-      <!-- Navigation on right -->
+      <!-- قائمة التنقل الموجودة في يمين الهيدر -->
       <nav>
          <ul>
           <li><a href="index.html" class="nav-link">
@@ -503,7 +505,7 @@
     </div>
   </header>
 
-    <!-- Hero Section -->
+    <!-- قسم البداية وفيه تعريف مختصر بالشركة -->
     <section class="hero">
         <div class="hero-content">
             <div class="hero-icon">
@@ -518,7 +520,7 @@
         </div>
     </section>
 
-    <!-- Vision Section -->
+    <!-- قسم الرؤية والقيم الأساسية -->
     <section class="vision">
         <div class="container">
             <h2 class="section-title">Our Vision</h2>
@@ -553,7 +555,7 @@
         </div>
     </section>
 
-    <!-- Process Section -->
+    <!-- قسم خطوات تنفيذ المشروع -->
     <section class="process">
         <div class="container">
             <h2 class="section-title">Our Process</h2>
@@ -607,15 +609,15 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
     <footer>
           <p>&copy; 2026 S&A DuoBuild. All rights reserved.</p>
           <p class="developer-credit">Developed by Sara Sameh and Abla Abdullah</p>
     </footer>
 
-    <!-- JavaScript for Scroll Animation -->
+    <!-- سكريبت حركة الظهور عند التمرير والتنقل السلس -->
     <script>
-        // Scroll Animation
+        // إعدادات مراقبة العناصر التي تظهر عند التمرير
         const observerOptions = {
             threshold: 0.1,
             rootMargin: "0px 0px -50px 0px"
@@ -631,7 +633,7 @@
 
         document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
 
-        // Smooth Scroll
+        // تنقل سلس عند الضغط على روابط داخل نفس الصفحة
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();

@@ -1,8 +1,8 @@
-# Logo Files
+# ملفات اللوقو وأيقونة التبويب
 
-Replace these files whenever you have the final logo:
+استبدل الملفات دي لما يكون اللوقو النهائي جاهز:
 
-- `logo.svg` controls the website header logo.
-- `favicon.svg` controls the browser tab icon.
+- `logo.svg` يتحكم في لوقو الهيدر داخل الموقع.
+- `favicon.svg` يتحكم في أيقونة التبويب فوق في المتصفح.
 
-Keep the same file names so the HTML does not need to change.
+خلي نفس أسماء الملفات عشان صفحات HTML ما تحتاج أي تعديل.

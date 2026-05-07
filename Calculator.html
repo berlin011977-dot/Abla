@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- إعدادات صفحة الحاسبة وربط ملفات التصميم والأيقونات -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <title>S&A DuoBuild | Smart Calculator 🏠✨</title>
-  <!-- Replace assets/favicon.svg later to change the browser tab icon. -->
+  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="style.css">
   
 </head>
 <body>
+  <!-- رأس الصفحة وفيه اللوقو وقائمة التنقل -->
   <header>
     <div class="container">
-      <!-- Logo with icon -->
+      <!-- اللوقو الموجود في يسار الهيدر -->
       <a href="index.html" class="logo">
-        <!-- Replace assets/logo.svg later to change the website logo. -->
+        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
         <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
         <span>S&A DuoBuild</span>
       </a>
       
-      <!-- Navigation -->
+      <!-- قائمة التنقل بين صفحات الموقع -->
       <nav>
        <ul>
          <li><a href="index.html" class="nav-link">
@@ -43,7 +45,7 @@
     </div>
   </header>
   <main class="container">
-    <!-- 🔹 Smart Calculator Section -->
+    <!-- قسم الحاسبة الذكية لإعطاء تقدير أولي للمشروع -->
     <section>
       <div class="calc-section">
         <div class="calc-header">
@@ -92,6 +94,7 @@
     </section>
   </main>
 
+  <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
   <footer>
     <div class="container">
       <p>🏗️ &copy; 2026 S&A DuoBuild. All rights reserved. ✨</p>
@@ -101,16 +104,19 @@
   </footer>
 
   <script>
+    // دالة الحاسبة: تقرأ المدخلات وتحسب عدد الغرف والمميزات ونسبة التوفير
     function calculateSmart() {
       const area = parseFloat(document.getElementById('calc-area').value);
       const budget = parseFloat(document.getElementById('calc-budget').value);
       const style = document.getElementById('calc-style').value;
 
+      // التحقق من صحة القيم قبل عرض النتيجة
       if (!area || area < 100 || !budget || budget < 50000) {
         alert('⚠️ Please enter a valid area (min 100 m²) and realistic budget (min $50,000).');
         return;
       }
 
+      // حساب النتائج بناءً على المساحة والميزانية ونمط التصميم
       const rooms = Math.max(3, Math.min(7, Math.floor(area / 45)));
       const tech = style === 'modern' ? 'Smart Lights + AC Control' :
                    style === 'classic' ? 'Full Security + Voice Control' :
@@ -118,10 +124,12 @@
       const costPerSqm = budget / area;
       const saving = Math.min(35, Math.max(5, Math.floor(20 + (costPerSqm / 1200))));
 
+      // عرض النتائج داخل صندوق النتيجة
       document.getElementById('res-rooms').textContent = rooms;
       document.getElementById('res-tech').textContent = tech;
       document.getElementById('res-saving').textContent = saving + '%';
 
+      // إظهار صندوق النتيجة والانتقال له بسلاسة
       const resultBox = document.getElementById('calc-result');
       resultBox.classList.add('show');
       resultBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });

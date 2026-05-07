@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 <head>
+  <!-- إعدادات صفحة الخدمات وربط الخطوط وملفات التصميم والأيقونات -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S&A DuoBuild | Smart Home Construction 🏠</title>
-  <!-- Replace assets/favicon.svg later to change the browser tab icon. -->
+  <!-- أيقونة التبويب: بدّل ملف assets/favicon.svg لاحقًا عند توفر اللوقو النهائي -->
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -13,7 +14,7 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Poppins', sans-serif; background: #f1f5f9; line-height: 1.6; }
 
-    /* 🔹 Navigation Bar */
+    /* تنسيق شريط التنقل */
     .navbar {
       background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
       padding: 0.8rem 2rem;
@@ -81,7 +82,7 @@
       cursor: pointer;
     }
 
-    /* 🔹 Hero Section */
+    /* تنسيق قسم البداية */
     .hero {
       min-height: 90vh;
       background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
@@ -155,7 +156,7 @@
       border-color: white;
     }
 
-    /* 🔹 Features Section */
+    /* تنسيق قسم المميزات */
     .features {
       padding: 4rem 2rem;
       max-width: 1200px;
@@ -207,7 +208,7 @@
       line-height: 1.6;
     }
 
-    /* 🔹 Smart Calculator Preview */
+    /* تنسيق معاينة الحاسبة الذكية */
     .calculator-section {
       background: linear-gradient(135deg, #f8fafc, #e2e8f0);
       padding: 4rem 2rem;
@@ -282,7 +283,7 @@
     .result-item h4 { color: #065f46; margin-bottom: 0.3rem; }
     .result-item p { font-size: 1.5rem; font-weight: 700; color: #10b981; }
 
-    /* 🔹 Services Preview */
+    /* تنسيق عرض الخدمات */
     .services-preview {
       padding: 4rem 2rem;
       max-width: 1200px;
@@ -315,7 +316,7 @@
       line-height: 1.6;
     }
 
-    /* 🔹 CTA Section */
+    /* تنسيق قسم الدعوة للتواصل */
     .cta-section {
       background: linear-gradient(135deg, #2563eb, #1d4ed8);
       padding: 4rem 2rem;
@@ -332,7 +333,7 @@
       opacity: 0.9;
     }
 
-    /* 🔹 Footer */
+    /* تنسيق تذييل الصفحة */
     footer {
       background: #0f172a;
       color: #94a3b8;
@@ -347,7 +348,7 @@
       font-size: 0.9rem;
     }
 
-    /* 🔹 Responsive */
+    /* تجاوب الصفحة مع الشاشات الصغيرة */
     @media (max-width: 768px) {
       .mobile-toggle { display: block; }
       .nav-menu {
@@ -373,11 +374,11 @@
 </head>
 <body>
 
-  <!-- 🔹 Navigation Bar -->
+  <!-- شريط التنقل الرئيسي -->
   <nav class="navbar">
     <div class="nav-container">
       <a href="index.html" class="logo">
-        <!-- Replace assets/logo.svg later to change the website logo. -->
+        <!-- لوقو الموقع: بدّل ملف assets/logo.svg لاحقًا عند توفر اللوقو النهائي -->
         <img src="assets/logo.svg" alt="S&A DuoBuild Logo" class="logo-icon">
         <span>S&A DuoBuild</span>
       </a>
@@ -396,7 +397,7 @@
     </div>
   </nav>
 
-  <!-- 🔹 Hero Section -->
+  <!-- قسم البداية الرئيسي لصفحة الخدمات -->
   <section class="hero">
     <div class="hero-content">
       <h1>🏠 Build Your Smart Home<br>From Vision to Reality ✨</h1>
@@ -408,7 +409,7 @@
     </div>
   </section>
 
-  <!-- 🔹 Features Section -->
+  <!-- قسم مميزات الشركة -->
   <section class="features">
     <div class="section-title">
       <h2>🌟 Why Choose S&A DuoBuild?</h2>
@@ -440,7 +441,7 @@
 
  
 
-  <!-- 🔹 Services Preview -->
+  <!-- قسم عرض الخدمات المتكاملة -->
   <section class="services-preview" id="services">
     <div class="section-title">
       <h2>⚙️ Our Integrated Services</h2>
@@ -474,7 +475,7 @@
     </div>
   </section>
 
-  <!-- 🔹 CTA Section -->
+  <!-- قسم دعوة المستخدم للتواصل وبدء المشروع -->
   <section class="cta-section">
     <h2>🚀 Ready to Build Your Dream Home?</h2>
     <p>Let's turn your vision into reality with smart technology and expert craftsmanship</p>
@@ -483,7 +484,7 @@
     </a>
   </section>
 
-  <!-- 🔹 Footer -->
+  <!-- تذييل الصفحة وحقوق الملكية وأسماء المطورين -->
   <footer>
     <p>🏗️ &copy; 2026 S&A DuoBuild. All rights reserved.</p>
     <p style="margin-top: 0.5rem;">🌐 Building Smart Homes, One Dream at a Time 🏡</p>
@@ -491,13 +492,13 @@
   </footer>
 
   <script>
-    // Mobile Menu Toggle
+    // فتح وإغلاق قائمة الموبايل
     function toggleMenu() {
       const navMenu = document.getElementById('navMenu');
       navMenu.classList.toggle('active');
     }
 
-    // Smart Calculator
+    // دالة الحاسبة الذكية في حالة استخدام عناصرها داخل الصفحة
     function calculateSmart() {
       const area = parseFloat(document.getElementById('calc-area').value);
       const budget = parseFloat(document.getElementById('calc-budget').value);
@@ -522,7 +523,7 @@
       document.getElementById('calc-result').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
 
-    // Smooth scroll for anchor links
+    // تنقل سلس للروابط الداخلية في الصفحة
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function (e) {
         e.preventDefault();
